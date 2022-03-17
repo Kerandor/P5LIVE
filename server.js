@@ -76,7 +76,7 @@ function startServer(keys){
 // OSC
 let iop, osc, oscServer, oscClient, isConnected;
 if(!online){
-	iop = require('socket.io', {transports: ['WebSocket'] }).listen(8082);
+	iop = require('socket.io', {transports: ['WebSocket'] })(8082);
 	osc = require('node-osc');
 }
 
